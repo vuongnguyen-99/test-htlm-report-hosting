@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Report Hosting — Sample Site</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,600;9..144,900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --ink: #14110f;
+    --paper: #f6f2ea;
+    --accent: #c65d3b;
+    --line: #d9d0c1;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  header {
+    padding: 6rem 2rem 3rem;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+  .kicker {
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1rem;
+  }
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    line-height: 0.95;
+    margin: 0 0 1.5rem;
+  }
+  h1 em {
+    font-style: italic;
+    font-weight: 300;
+    color: var(--accent);
+  }
+  .lede {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    max-width: 55ch;
+    color: #4a463f;
+  }
+  main {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 2rem 6rem;
+    display: grid;
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+  .card {
+    background: var(--paper);
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    gap: 1.5rem;
+    align-items: start;
+  }
+  .num {
+    font-family: 'Fraunces', serif;
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--accent);
+  }
+  .card h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin: 0 0 0.5rem;
+  }
+  .card p {
+    margin: 0;
+    color: #4a463f;
+    line-height: 1.55;
+    font-size: 0.95rem;
+  }
+  footer {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-top: 1px solid var(--line);
+    font-size: 0.8rem;
+    color: #8a8375;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+  <header>
+    <div class="kicker">GitHub Pages · Sample</div>
+    <h1>Hosting <em>HTML</em><br />reports, simply.</h1>
+    <p class="lede">
+      This page is served directly from a GitHub repository via GitHub Pages —
+      no build step, no server, just a static <code>index.html</code> at the
+      top level of the publishing source.
+    </p>
+  </header>
+  <main>
+    <div class="card">
+      <div class="num">01</div>
+      <div>
+        <h2>Entry file</h2>
+        <p>GitHub Pages looks for <code>index.html</code>, <code>index.md</code>, or <code>README.md</code> at the top level of the publishing source.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="num">02</div>
+      <div>
+        <h2>Publishing source</h2>
+        <p>Configured per-repo under Settings → Pages — either a branch/folder or a GitHub Actions workflow artifact.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="num">03</div>
+      <div>
+        <h2>Build &amp; deploy</h2>
+        <p>Every push to the publishing source triggers a GitHub Actions run that builds and deploys the site automatically.</p>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <span>test-htlm-report-hosting</span>
+    <a href="https://docs.github.com/pages">docs.github.com/pages</a>
+  </footer>
+</body>
+</html>
